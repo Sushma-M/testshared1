@@ -1,0 +1,1530 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="TestDB_26may" type="DataService" springFile="TestDB_26may.spring.xml">
+    <dataobjects>
+        <dataobject javaType="com.testshared1.testdb_26may.User">
+            <element name="payrollsForFkUserConfirmation" typeRef="com.testshared1.testdb_26may.Payroll" isList="true" allowNull="true"/>
+            <element name="payrollsForFkUserPrints" typeRef="com.testshared1.testdb_26may.Payroll" isList="true" allowNull="true"/>
+            <element name="logs" typeRef="com.testshared1.testdb_26may.Log" isList="true" allowNull="true"/>
+            <element name="employeeMessagesForFkUserSends" typeRef="com.testshared1.testdb_26may.EmployeeMessage" isList="true" allowNull="true"/>
+            <element name="paymentChecks" typeRef="com.testshared1.testdb_26may.PaymentCheck" isList="true" allowNull="true"/>
+            <element name="payrollsForFkUserElaborate" typeRef="com.testshared1.testdb_26may.Payroll" isList="true" allowNull="true"/>
+            <element name="employeeAssessments" typeRef="com.testshared1.testdb_26may.EmployeeAssessment" isList="true" allowNull="true"/>
+            <element name="identityNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="password" typeRef="java.lang.String" allowNull="true"/>
+            <element name="country" typeRef="com.testshared1.testdb_26may.Country" allowNull="true"/>
+            <element name="applicantNotes" typeRef="com.testshared1.testdb_26may.ApplicantNote" isList="true" allowNull="true"/>
+            <element name="employeeMessagesForFkUserReceive" typeRef="com.testshared1.testdb_26may.EmployeeMessage" isList="true" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="role" typeRef="com.testshared1.testdb_26may.Role" allowNull="true"/>
+            <element name="userFullname" typeRef="java.lang.String" allowNull="true"/>
+            <element name="login" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ScheduleFixed">
+            <element name="scheduleFixedDays" typeRef="com.testshared1.testdb_26may.ScheduleFixedDay" isList="true" allowNull="true"/>
+            <element name="employeeSalaries" typeRef="com.testshared1.testdb_26may.EmployeeSalary" isList="true" allowNull="true"/>
+            <element name="lunchTotalTime" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idScheduleFixed" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="totalWorkedWeekHours" typeRef="java.lang.Double" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.PayrollDetail">
+            <element name="listPeriodicBonusPayrolls" typeRef="com.testshared1.testdb_26may.ListPeriodicBonusPayroll" isList="true" allowNull="true"/>
+            <element name="payroll" typeRef="com.testshared1.testdb_26may.Payroll" allowNull="true"/>
+            <element name="listLoanDetailPayrolls" typeRef="com.testshared1.testdb_26may.ListLoanDetailPayroll" isList="true" allowNull="true"/>
+            <element name="netSalary" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="totalExpenditures" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="bonusEventuals" typeRef="com.testshared1.testdb_26may.BonusEventual" isList="true" allowNull="true"/>
+            <element name="paymentChecks" typeRef="com.testshared1.testdb_26may.PaymentCheck" isList="true" allowNull="true"/>
+            <element name="typeGenerationForm" typeRef="com.testshared1.testdb_26may.TypeGenerationForm" allowNull="true"/>
+            <element name="deductionEventuals" typeRef="com.testshared1.testdb_26may.DeductionEventual" isList="true" allowNull="true"/>
+            <element name="basicSalary" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="listPeriodicDeductionPayrolls" typeRef="com.testshared1.testdb_26may.ListPeriodicDeductionPayroll" isList="true" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="listOvertimePayrolls" typeRef="com.testshared1.testdb_26may.ListOvertimePayroll" isList="true" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+            <element name="creationDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="totalIncome" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="listTravelExpenseDetails" typeRef="com.testshared1.testdb_26may.ListTravelExpenseDetail" isList="true" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="increasedIncomeOutflow" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="typeEmployeePaymentMethod" typeRef="com.testshared1.testdb_26may.TypeEmployeePaymentMethod" allowNull="true"/>
+            <element name="listCommissionPayrolls" typeRef="com.testshared1.testdb_26may.ListCommissionPayroll" isList="true" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="idPayrollDetail" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.RolePermission">
+            <element name="category" typeRef="java.lang.String" allowNull="true"/>
+            <element name="englishLabel" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idRolePermission" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="rolePermissionName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listRolePermissions" typeRef="com.testshared1.testdb_26may.ListRolePermission" isList="true" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="spanishLabel" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeAbsenceJustification">
+            <element name="justifiedAbsenses" typeRef="com.testshared1.testdb_26may.JustifiedAbsense" isList="true" allowNull="true"/>
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeAbsenceJustification" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.EmployeeContract">
+            <element name="startDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idEmployeeContract" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="finalDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.LogOperation">
+            <element name="typeOperationLog" typeRef="com.testshared1.testdb_26may.TypeOperationLog" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="logs" typeRef="com.testshared1.testdb_26may.Log" isList="true" allowNull="true"/>
+            <element name="idLogOperation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.WorkPositionScope">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idWorkPositionScope" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="workPosition" typeRef="com.testshared1.testdb_26may.WorkPosition" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Conf">
+            <element name="idConf" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.EmployeeTermination">
+            <element name="terminationDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="reason" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idEmployeeTermination" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="typeEmployeeTermination" typeRef="com.testshared1.testdb_26may.TypeEmployeeTermination" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.EmployeePhotoFile">
+            <element name="idEmployeePhotoFile" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="fileName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="attachment" typeRef="java.lang.String" isList="true" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="mimeType" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ScheduleFixedDay">
+            <element name="outputTime" typeRef="java.util.Date" allowNull="true"/>
+            <element name="scheduleFixed" typeRef="com.testshared1.testdb_26may.ScheduleFixed" allowNull="true"/>
+            <element name="weekDay" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="lunchHourOrder" typeRef="java.util.Date" allowNull="true"/>
+            <element name="lunchStartTime" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idScheduleFixedDay" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="checkIn" typeRef="java.util.Date" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.CompensatoryDayCredit">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="startPeriodDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="generatedDay" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="endPeriodDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="idCompensatoryDayCredit" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ApplicantFile">
+            <element name="filePath" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="applicantToPosition" typeRef="com.testshared1.testdb_26may.ApplicantToPosition" allowNull="true"/>
+            <element name="mimeType" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idApplicantFile" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.BadgeEmployee">
+            <element name="userPrinting" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="imprintDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="expirationDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="dateQueue" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="impreso" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="idBadgeEmployee" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userQueue" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.CompanyDepartment">
+            <element name="idCompanyDepartment" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="companyDepartmentByFkSuperiorDepartment" typeRef="com.testshared1.testdb_26may.CompanyDepartment" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="companyDepartmentsForFkSuperiorDepartment" typeRef="com.testshared1.testdb_26may.CompanyDepartment" isList="true" allowNull="true"/>
+            <element name="location" typeRef="com.testshared1.testdb_26may.Location" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="workPositions" typeRef="com.testshared1.testdb_26may.WorkPosition" isList="true" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="typeCompanyDepartment" typeRef="com.testshared1.testdb_26may.TypeCompanyDepartment" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Currency">
+            <element name="listPeriodicBonusPayrolls" typeRef="com.testshared1.testdb_26may.ListPeriodicBonusPayroll" isList="true" allowNull="true"/>
+            <element name="listLoanDetailPayrolls" typeRef="com.testshared1.testdb_26may.ListLoanDetailPayroll" isList="true" allowNull="true"/>
+            <element name="listCommissionEmployees" typeRef="com.testshared1.testdb_26may.ListCommissionEmployee" isList="true" allowNull="true"/>
+            <element name="enable" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="listPeriodicBonusEmployees" typeRef="com.testshared1.testdb_26may.ListPeriodicBonusEmployee" isList="true" allowNull="true"/>
+            <element name="idCurrency" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="deductionPeriodics" typeRef="com.testshared1.testdb_26may.DeductionPeriodic" isList="true" allowNull="true"/>
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="mobileNumbers" typeRef="com.testshared1.testdb_26may.MobileNumber" isList="true" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="payrolls" typeRef="com.testshared1.testdb_26may.Payroll" isList="true" allowNull="true"/>
+            <element name="typeExtraHourSegments" typeRef="com.testshared1.testdb_26may.TypeExtraHourSegment" isList="true" allowNull="true"/>
+            <element name="iso" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listPeriodicDeductionEmployees" typeRef="com.testshared1.testdb_26may.ListPeriodicDeductionEmployee" isList="true" allowNull="true"/>
+            <element name="bonusEventuals" typeRef="com.testshared1.testdb_26may.BonusEventual" isList="true" allowNull="true"/>
+            <element name="deductionEventuals" typeRef="com.testshared1.testdb_26may.DeductionEventual" isList="true" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="listPeriodicDeductionPayrolls" typeRef="com.testshared1.testdb_26may.ListPeriodicDeductionPayroll" isList="true" allowNull="true"/>
+            <element name="listOvertimePayrolls" typeRef="com.testshared1.testdb_26may.ListOvertimePayroll" isList="true" allowNull="true"/>
+            <element name="travelExpenses" typeRef="com.testshared1.testdb_26may.TravelExpense" isList="true" allowNull="true"/>
+            <element name="overTimeSegmentPayrolls" typeRef="com.testshared1.testdb_26may.OverTimeSegmentPayroll" isList="true" allowNull="true"/>
+            <element name="loans" typeRef="com.testshared1.testdb_26may.Loan" isList="true" allowNull="true"/>
+            <element name="payrollDetails" typeRef="com.testshared1.testdb_26may.PayrollDetail" isList="true" allowNull="true"/>
+            <element name="employeeSalaries" typeRef="com.testshared1.testdb_26may.EmployeeSalary" isList="true" allowNull="true"/>
+            <element name="listCelphoneDetailPayrolls" typeRef="com.testshared1.testdb_26may.ListCelphoneDetailPayroll" isList="true" allowNull="true"/>
+            <element name="paymentLoanManuals" typeRef="com.testshared1.testdb_26may.PaymentLoanManual" isList="true" allowNull="true"/>
+            <element name="listTravelExpenseDetails" typeRef="com.testshared1.testdb_26may.ListTravelExpenseDetail" isList="true" allowNull="true"/>
+            <element name="listEmployeePhones" typeRef="com.testshared1.testdb_26may.ListEmployeePhone" isList="true" allowNull="true"/>
+            <element name="isrDetails" typeRef="com.testshared1.testdb_26may.IsrDetail" isList="true" allowNull="true"/>
+            <element name="listCommissionPayrolls" typeRef="com.testshared1.testdb_26may.ListCommissionPayroll" isList="true" allowNull="true"/>
+            <element name="bonusPeriodics" typeRef="com.testshared1.testdb_26may.BonusPeriodic" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.EmployeeGeneralDetail">
+            <element name="monthlyFinancialClaim" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="dependentNumber" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="personalPhone" typeRef="java.lang.String" allowNull="true"/>
+            <element name="country" typeRef="com.testshared1.testdb_26may.Country" allowNull="true"/>
+            <element name="cityResidence" typeRef="java.lang.String" allowNull="true"/>
+            <element name="personalMobileNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="socialSecurity" typeRef="java.lang.String" allowNull="true"/>
+            <element name="addressResidence" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="termsOfRecruitment" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idEmployeeGeneralDetail" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.EmployeeTraining">
+            <element name="unitDuration" typeRef="java.lang.String" allowNull="true"/>
+            <element name="orderTrainingDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="duration" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="startTrainingDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="approximateDate" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="impartidoPor" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="trainingTopic" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idEmployeeTraining" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListPeriodicBonusPayroll">
+            <element name="bonusPeriodic" typeRef="com.testshared1.testdb_26may.BonusPeriodic" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="payrollDetail" typeRef="com.testshared1.testdb_26may.PayrollDetail" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idListPeriodicBonusPayroll" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeIncident">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="incidenceEmployees" typeRef="com.testshared1.testdb_26may.IncidenceEmployee" isList="true" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idTypeIncident" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="typeIncidentSeverity" typeRef="com.testshared1.testdb_26may.TypeIncidentSeverity" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.BadgeTemplate">
+            <element name="information" typeRef="java.lang.String" isList="true" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="backgroundDataBehind" typeRef="java.lang.String" isList="true" allowNull="true"/>
+            <element name="idBadgeTemplate" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="dataThumbnailView" typeRef="java.lang.String" isList="true" allowNull="true"/>
+            <element name="backgroundDataFront" typeRef="java.lang.String" isList="true" allowNull="true"/>
+            <element name="templateName" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListTravelExpenseDetail">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="travelExpense" typeRef="com.testshared1.testdb_26may.TravelExpense" allowNull="true"/>
+            <element name="payrollDetail" typeRef="com.testshared1.testdb_26may.PayrollDetail" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="idListTravelExpenseDetail" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.JustifiedAbsense">
+            <element name="absenceDateStart" typeRef="java.util.Date" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="totalJustifiedDays" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="typeAbsenceJustification" typeRef="com.testshared1.testdb_26may.TypeAbsenceJustification" allowNull="true"/>
+            <element name="absenceDateFinal" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idJustifiedAbsense" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="justifiedLeaveFiles" typeRef="com.testshared1.testdb_26may.JustifiedLeaveFile" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListAssetReintegrated">
+            <element name="assetReintegrationDocument" typeRef="com.testshared1.testdb_26may.AssetReintegrationDocument" allowNull="true"/>
+            <element name="idListAssetReintegrated" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="asset" typeRef="com.testshared1.testdb_26may.Asset" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Country">
+            <element name="employeeGeneralDetails" typeRef="com.testshared1.testdb_26may.EmployeeGeneralDetail" isList="true" allowNull="true"/>
+            <element name="users" typeRef="com.testshared1.testdb_26may.User" isList="true" allowNull="true"/>
+            <element name="idCountry" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="nationality" typeRef="java.lang.String" allowNull="true"/>
+            <element name="locations" typeRef="com.testshared1.testdb_26may.Location" isList="true" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="applicantToPositions" typeRef="com.testshared1.testdb_26may.ApplicantToPosition" isList="true" allowNull="true"/>
+            <element name="codIso1" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="codIso2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="codIso3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employees" typeRef="com.testshared1.testdb_26may.Employee" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.EmployeeLaborHistory">
+            <element name="occasionOfRetirement" typeRef="java.lang.String" allowNull="true"/>
+            <element name="startDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idEmployeeLaborHistory" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="charge" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="finalDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="institution" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListPeriodicBonusEmployee">
+            <element name="bonusPeriodic" typeRef="com.testshared1.testdb_26may.BonusPeriodic" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="typeGenerationForm" typeRef="com.testshared1.testdb_26may.TypeGenerationForm" allowNull="true"/>
+            <element name="active" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="idListPeriodicBonusEmployee" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListAssetDiscarded">
+            <element name="idListAssetDiscarded" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="assetDiscardDocument" typeRef="com.testshared1.testdb_26may.AssetDiscardDocument" allowNull="true"/>
+            <element name="asset" typeRef="com.testshared1.testdb_26may.Asset" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.BonusEventual">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="reason" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="payrollDetail" typeRef="com.testshared1.testdb_26may.PayrollDetail" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+            <element name="idBonusEventual" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ApplicantNote">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="noteDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="user" typeRef="com.testshared1.testdb_26may.User" allowNull="true"/>
+            <element name="applicantToPosition" typeRef="com.testshared1.testdb_26may.ApplicantToPosition" allowNull="true"/>
+            <element name="idApplicantNote" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ScheduleDynamic">
+            <element name="employeeSalaries" typeRef="com.testshared1.testdb_26may.EmployeeSalary" isList="true" allowNull="true"/>
+            <element name="outputTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="lunchHourStart" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="idScheduleDynamic" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="lunchHourEnd" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="checkIn" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="hourLunchPaid" typeRef="java.lang.Boolean" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeIncidentSeverity">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeIncidentSeverity" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="typeIncidents" typeRef="com.testshared1.testdb_26may.TypeIncident" isList="true" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeMovement">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="employeeFileLocations" typeRef="com.testshared1.testdb_26may.EmployeeFileLocation" isList="true" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idTypeMovement" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.CompensatoryDayDebit">
+            <element name="idTiempoCompensatorioDiaAcreditado" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="startPeriodDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="generatedDay" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="endPeriodDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListCelphoneDetailPayroll">
+            <element name="payroll" typeRef="com.testshared1.testdb_26may.Payroll" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="impuesto" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="totalValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idListCelphoneDetailPayroll" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="monthlyExpenses" typeRef="java.lang.Float" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="mobileNumber" typeRef="com.testshared1.testdb_26may.MobileNumber" allowNull="true"/>
+            <element name="invoiceValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="employeeCharge" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="employeeResponsibilities" typeRef="java.lang.String" allowNull="true"/>
+            <element name="companyBonus" typeRef="java.lang.Double" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeRecruitment">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeRecruitment" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="typeGenerationForm" typeRef="com.testshared1.testdb_26may.TypeGenerationForm" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employees" typeRef="com.testshared1.testdb_26may.Employee" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeEmployeePaymentMethod">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="payrollDetails" typeRef="com.testshared1.testdb_26may.PayrollDetail" isList="true" allowNull="true"/>
+            <element name="employeeSalaries" typeRef="com.testshared1.testdb_26may.EmployeeSalary" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeEmployeeStatus" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListPeriodicDeductionEmployee">
+            <element name="idListPeriodicDeductionEmployee" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="typeGenerationForm" typeRef="com.testshared1.testdb_26may.TypeGenerationForm" allowNull="true"/>
+            <element name="active" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="deductionPeriodic" typeRef="com.testshared1.testdb_26may.DeductionPeriodic" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListLoanDetailPayroll">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="interestValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="valuePaid" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="payrollDetail" typeRef="com.testshared1.testdb_26may.PayrollDetail" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="interestRate" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="idListLoanDetailPayroll" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="loan" typeRef="com.testshared1.testdb_26may.Loan" allowNull="true"/>
+            <element name="totalValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TravelExpense">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="travelEmployee" typeRef="com.testshared1.testdb_26may.TravelEmployee" allowNull="true"/>
+            <element name="justifiedTravelExpenseFiles" typeRef="com.testshared1.testdb_26may.JustifiedTravelExpenseFile" isList="true" allowNull="true"/>
+            <element name="reason" typeRef="java.lang.String" allowNull="true"/>
+            <element name="typeTravellingExpense" typeRef="com.testshared1.testdb_26may.TypeTravellingExpense" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+            <element name="creationDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="idTravelExpense" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="listTravelExpenseDetails" typeRef="com.testshared1.testdb_26may.ListTravelExpenseDetail" isList="true" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.AssetReintegrationDocument">
+            <element name="printedNote" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="noteRepaymentDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="listAssetReintegrateds" typeRef="com.testshared1.testdb_26may.ListAssetReintegrated" isList="true" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idAssetReintegrationDocument" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userDevelops" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.AssetAssignDocument">
+            <element name="printedNote" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="idAssetAssignDocument" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="listAssetLoadeds" typeRef="com.testshared1.testdb_26may.ListAssetLoaded" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="noteOfficeDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="userDevelops" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.JustifiedLeaveFile">
+            <element name="idJustifiedLeaveFile" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="filePath" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="justifiedAbsense" typeRef="com.testshared1.testdb_26may.JustifiedAbsense" allowNull="true"/>
+            <element name="mimeType" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.EmployeeWorkProof">
+            <element name="cetificationText" typeRef="java.lang.String" allowNull="true"/>
+            <element name="imprintDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idEmployeeWorkProof" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userDevelopment" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="uuid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.EmployeeFileLocation">
+            <element name="containerNumber" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateOfMovement" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="typeMovement" typeRef="com.testshared1.testdb_26may.TypeMovement" allowNull="true"/>
+            <element name="idEmployeeFileLocation" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.EmployeeSalary">
+            <element name="scheduleDynamic" typeRef="com.testshared1.testdb_26may.ScheduleDynamic" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="biweeklySalary" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="typeGenerationForm" typeRef="com.testshared1.testdb_26may.TypeGenerationForm" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idEmployeeSalary" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="basicWageHour" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+            <element name="scheduleFixed" typeRef="com.testshared1.testdb_26may.ScheduleFixed" allowNull="true"/>
+            <element name="monthlySalary" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="active" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="bankAccountNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="bank" typeRef="com.testshared1.testdb_26may.Bank" allowNull="true"/>
+            <element name="typeEmployeePaymentMethod" typeRef="com.testshared1.testdb_26may.TypeEmployeePaymentMethod" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.WorkPositionVacant">
+            <element name="applicantToPositionsForFkWorkPositionVacant" typeRef="com.testshared1.testdb_26may.ApplicantToPosition" isList="true" allowNull="true"/>
+            <element name="applicantToPositionByFkAspiranteAsignado" typeRef="com.testshared1.testdb_26may.ApplicantToPosition" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="workPosition" typeRef="com.testshared1.testdb_26may.WorkPosition" allowNull="true"/>
+            <element name="idWorkPositionVacant" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Announcement">
+            <element name="details" typeRef="java.lang.String" allowNull="true"/>
+            <element name="typeAnnouncement" typeRef="com.testshared1.testdb_26may.TypeAnnouncement" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="issue" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idAnnouncement" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="highPriority" typeRef="java.lang.Boolean" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Employee">
+            <element name="employeeGeneralDetails" typeRef="com.testshared1.testdb_26may.EmployeeGeneralDetail" isList="true" allowNull="true"/>
+            <element name="employeeTrainings" typeRef="com.testshared1.testdb_26may.EmployeeTraining" isList="true" allowNull="true"/>
+            <element name="surname" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employeeAssessmentsForFkEvaluatedEmployee" typeRef="com.testshared1.testdb_26may.EmployeeAssessment" isList="true" allowNull="true"/>
+            <element name="identityNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idEmployee" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="marriageName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="assetAssignDocuments" typeRef="com.testshared1.testdb_26may.AssetAssignDocument" isList="true" allowNull="true"/>
+            <element name="typeMaritalStatus" typeRef="com.testshared1.testdb_26may.TypeMaritalStatus" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="birthDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="employeeTerminations" typeRef="com.testshared1.testdb_26may.EmployeeTermination" isList="true" allowNull="true"/>
+            <element name="employeeLaborHistories" typeRef="com.testshared1.testdb_26may.EmployeeLaborHistory" isList="true" allowNull="true"/>
+            <element name="secondSurname" typeRef="java.lang.String" allowNull="true"/>
+            <element name="typeEmployeeStatus" typeRef="com.testshared1.testdb_26may.TypeEmployeeStatus" allowNull="true"/>
+            <element name="employeeAssessmentsForFkEvaluatingEmployee" typeRef="com.testshared1.testdb_26may.EmployeeAssessment" isList="true" allowNull="true"/>
+            <element name="listPeriodicDeductionEmployees" typeRef="com.testshared1.testdb_26may.ListPeriodicDeductionEmployee" isList="true" allowNull="true"/>
+            <element name="employeeFileLocations" typeRef="com.testshared1.testdb_26may.EmployeeFileLocation" isList="true" allowNull="true"/>
+            <element name="country" typeRef="com.testshared1.testdb_26may.Country" allowNull="true"/>
+            <element name="assets" typeRef="com.testshared1.testdb_26may.Asset" isList="true" allowNull="true"/>
+            <element name="timeSheets" typeRef="com.testshared1.testdb_26may.TimeSheet" isList="true" allowNull="true"/>
+            <element name="email" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employeeWorkProofs" typeRef="com.testshared1.testdb_26may.EmployeeWorkProof" isList="true" allowNull="true"/>
+            <element name="overTimeEmployees" typeRef="com.testshared1.testdb_26may.OverTimeEmployee" isList="true" allowNull="true"/>
+            <element name="isrDetails" typeRef="com.testshared1.testdb_26may.IsrDetail" isList="true" allowNull="true"/>
+            <element name="vacationDayCredits" typeRef="com.testshared1.testdb_26may.VacationDayCredit" isList="true" allowNull="true"/>
+            <element name="uuid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="completeRegistration" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="travelEmployees" typeRef="com.testshared1.testdb_26may.TravelEmployee" isList="true" allowNull="true"/>
+            <element name="vacationDayDebits" typeRef="com.testshared1.testdb_26may.VacationDayDebit" isList="true" allowNull="true"/>
+            <element name="sex" typeRef="java.lang.String" allowNull="true"/>
+            <element name="scheduleDynamics" typeRef="com.testshared1.testdb_26may.ScheduleDynamic" isList="true" allowNull="true"/>
+            <element name="listCommissionEmployees" typeRef="com.testshared1.testdb_26may.ListCommissionEmployee" isList="true" allowNull="true"/>
+            <element name="typeRecruitment" typeRef="com.testshared1.testdb_26may.TypeRecruitment" allowNull="true"/>
+            <element name="badgeEmployees" typeRef="com.testshared1.testdb_26may.BadgeEmployee" isList="true" allowNull="true"/>
+            <element name="incidenceEmployees" typeRef="com.testshared1.testdb_26may.IncidenceEmployee" isList="true" allowNull="true"/>
+            <element name="listPeriodicBonusEmployees" typeRef="com.testshared1.testdb_26may.ListPeriodicBonusEmployee" isList="true" allowNull="true"/>
+            <element name="assetDischargeDocuments" typeRef="com.testshared1.testdb_26may.AssetDischargeDocument" isList="true" allowNull="true"/>
+            <element name="employeePhotoFiles" typeRef="com.testshared1.testdb_26may.EmployeePhotoFile" isList="true" allowNull="true"/>
+            <element name="employeeWorkDays" typeRef="com.testshared1.testdb_26may.EmployeeWorkDay" isList="true" allowNull="true"/>
+            <element name="secondName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="compensatoryDayDebits" typeRef="com.testshared1.testdb_26may.CompensatoryDayDebit" isList="true" allowNull="true"/>
+            <element name="employeeEducations" typeRef="com.testshared1.testdb_26may.EmployeeEducation" isList="true" allowNull="true"/>
+            <element name="employeeFiles" typeRef="com.testshared1.testdb_26may.EmployeeFile" isList="true" allowNull="true"/>
+            <element name="employeePersonalReferences" typeRef="com.testshared1.testdb_26may.EmployeePersonalReference" isList="true" allowNull="true"/>
+            <element name="firstName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="applicantToPosition" typeRef="com.testshared1.testdb_26may.ApplicantToPosition" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="compensatoryDayCredits" typeRef="com.testshared1.testdb_26may.CompensatoryDayCredit" isList="true" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employeeContracts" typeRef="com.testshared1.testdb_26may.EmployeeContract" isList="true" allowNull="true"/>
+            <element name="activeEmployee" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="loans" typeRef="com.testshared1.testdb_26may.Loan" isList="true" allowNull="true"/>
+            <element name="justifiedAbsenses" typeRef="com.testshared1.testdb_26may.JustifiedAbsense" isList="true" allowNull="true"/>
+            <element name="payrollDetails" typeRef="com.testshared1.testdb_26may.PayrollDetail" isList="true" allowNull="true"/>
+            <element name="employeeSalaries" typeRef="com.testshared1.testdb_26may.EmployeeSalary" isList="true" allowNull="true"/>
+            <element name="listEmployeePositions" typeRef="com.testshared1.testdb_26may.ListEmployeePosition" isList="true" allowNull="true"/>
+            <element name="listEmployeePhones" typeRef="com.testshared1.testdb_26may.ListEmployeePhone" isList="true" allowNull="true"/>
+            <element name="workStartDate" typeRef="java.util.Date" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.DetallePlanillaEgresos">
+            <element name="type_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="code" typeRef="java.lang.String" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="idPayrollDetail" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Commission">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listCommissionEmployees" typeRef="com.testshared1.testdb_26may.ListCommissionEmployee" isList="true" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="listCommissionPayrolls" typeRef="com.testshared1.testdb_26may.ListCommissionPayroll" isList="true" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idCommission" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.EmployeeEducation">
+            <element name="idEmployeeEducation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="title" typeRef="java.lang.String" allowNull="true"/>
+            <element name="typeEducation" typeRef="com.testshared1.testdb_26may.TypeEducation" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="yearRetrieved" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="institution" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.AssetDiscardDocument">
+            <element name="printedNote" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="noteReleaseDiscard" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="listAssetDiscardeds" typeRef="com.testshared1.testdb_26may.ListAssetDiscarded" isList="true" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idAssetDiscardDocument" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userDevelops" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Alert">
+            <element name="message" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idAlert" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="typeAlert" typeRef="com.testshared1.testdb_26may.TypeAlert" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="confirmation" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="alertDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.CompanyInfo">
+            <element name="phone" typeRef="java.lang.String" allowNull="true"/>
+            <element name="website" typeRef="java.lang.String" allowNull="true"/>
+            <element name="direction" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idCompanyInfo" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeGenerationForm">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="payrollDetails" typeRef="com.testshared1.testdb_26may.PayrollDetail" isList="true" allowNull="true"/>
+            <element name="employeeSalaries" typeRef="com.testshared1.testdb_26may.EmployeeSalary" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listPeriodicDeductionEmployees" typeRef="com.testshared1.testdb_26may.ListPeriodicDeductionEmployee" isList="true" allowNull="true"/>
+            <element name="idTypeEmployeePaymentMethod" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listPeriodicBonusEmployees" typeRef="com.testshared1.testdb_26may.ListPeriodicBonusEmployee" isList="true" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="typeRecruitments" typeRef="com.testshared1.testdb_26may.TypeRecruitment" isList="true" allowNull="true"/>
+            <element name="payrolls" typeRef="com.testshared1.testdb_26may.Payroll" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Role">
+            <element name="users" typeRef="com.testshared1.testdb_26may.User" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idRole" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="listRolePermissions" typeRef="com.testshared1.testdb_26may.ListRolePermission" isList="true" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="roleName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeMaritalStatus">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeEmployeeTermination" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="applicantToPositions" typeRef="com.testshared1.testdb_26may.ApplicantToPosition" isList="true" allowNull="true"/>
+            <element name="employees" typeRef="com.testshared1.testdb_26may.Employee" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Assessment">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="assessmentFields" typeRef="com.testshared1.testdb_26may.AssessmentField" isList="true" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idAssessment" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userEvaluation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="fkWorkPosition" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TimeSheet">
+            <element name="ipMarked" typeRef="java.lang.String" allowNull="true"/>
+            <element name="markedTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="typeOperationTimesheet" typeRef="com.testshared1.testdb_26may.TypeOperationTimesheet" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="idTimeSheet" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeCommission">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeCommission" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Month">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idMonth" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.EmployeeFile">
+            <element name="filePath" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idEmployeeFile" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="mimeType" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListCommissionEmployee">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="commissionSalesPercentage" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="active" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="commission" typeRef="com.testshared1.testdb_26may.Commission" allowNull="true"/>
+            <element name="idListCommissionEmployee" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeEmployeePayment">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeEmployeePayment" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.IncidenceEmployee">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="incidenceDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idIncidenceEmployee" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="typeIncident" typeRef="com.testshared1.testdb_26may.TypeIncident" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeCellularCompany">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeCellularCompany" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="mobileNumbers" typeRef="com.testshared1.testdb_26may.MobileNumber" isList="true" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Loan">
+            <element name="quantityPeriods" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="listLoanDetailPayrolls" typeRef="com.testshared1.testdb_26may.ListLoanDetailPayroll" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="reason" typeRef="java.lang.String" allowNull="true"/>
+            <element name="collectedLoanWorksheet" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="loanEntireValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="fixedQuota" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="interestRate" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="idLoan" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+            <element name="paymentLoanManuals" typeRef="com.testshared1.testdb_26may.PaymentLoanManual" isList="true" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="externalLoan" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="loanPaid" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="loanDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.VacationDayCredit">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="startPeriodDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="generatedDay" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idVacationDayCredit" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="endPeriodDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.WorkPositionResponsibility">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="workPosition" typeRef="com.testshared1.testdb_26may.WorkPosition" allowNull="true"/>
+            <element name="idWorkPositionResponsibility" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.BonusPeriodic">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listPeriodicBonusPayrolls" typeRef="com.testshared1.testdb_26may.ListPeriodicBonusPayroll" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="suggestedValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="calculations" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listPeriodicBonusEmployees" typeRef="com.testshared1.testdb_26may.ListPeriodicBonusEmployee" isList="true" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idBonusPeriodic" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Asset">
+            <element name="model" typeRef="java.lang.String" allowNull="true"/>
+            <element name="supplierName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="billNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="rejection" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="listAssetDiscardeds" typeRef="com.testshared1.testdb_26may.ListAssetDiscarded" isList="true" allowNull="true"/>
+            <element name="seriesNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="assetFiles" typeRef="com.testshared1.testdb_26may.AssetFile" isList="true" allowNull="true"/>
+            <element name="purchasedValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idAsset" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="listAssetLoadeds" typeRef="com.testshared1.testdb_26may.ListAssetLoaded" isList="true" allowNull="true"/>
+            <element name="currentlyLoaded" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="typeAsset" typeRef="com.testshared1.testdb_26may.TypeAsset" allowNull="true"/>
+            <element name="listAssetReintegrateds" typeRef="com.testshared1.testdb_26may.ListAssetReintegrated" isList="true" allowNull="true"/>
+            <element name="inventoryNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="assetPhotoFiles" typeRef="com.testshared1.testdb_26may.AssetPhotoFile" isList="true" allowNull="true"/>
+            <element name="purchaseDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="listAssetUnloadeds" typeRef="com.testshared1.testdb_26may.ListAssetUnloaded" isList="true" allowNull="true"/>
+            <element name="brand" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.JustifiedTravelExpenseFile">
+            <element name="filePath" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="fileName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="travelExpense" typeRef="com.testshared1.testdb_26may.TravelExpense" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idJustifiedTravelExpenseFile" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="mimeType" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListRolePermission">
+            <element name="idListRolePermission" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="role" typeRef="com.testshared1.testdb_26may.Role" allowNull="true"/>
+            <element name="rolePermission" typeRef="com.testshared1.testdb_26may.RolePermission" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.WorkPositionRequiement">
+            <element name="idWorkPositionRequiement" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="workPosition" typeRef="com.testshared1.testdb_26may.WorkPosition" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.AssetDischargeDocument">
+            <element name="printedNote" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="noteReleaseDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idAssetDischargeDocument" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="listAssetUnloadeds" typeRef="com.testshared1.testdb_26may.ListAssetUnloaded" isList="true" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="userDevelops" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListAssetLoaded">
+            <element name="idListAssetLoaded" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currentlyLoaded" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="assetAssignDocument" typeRef="com.testshared1.testdb_26may.AssetAssignDocument" allowNull="true"/>
+            <element name="asset" typeRef="com.testshared1.testdb_26may.Asset" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeAsset">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="assets" typeRef="com.testshared1.testdb_26may.Asset" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeAsset" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TravelEmployee">
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="viaje" typeRef="com.testshared1.testdb_26may.Viaje" allowNull="true"/>
+            <element name="tripPurpose" typeRef="java.lang.String" allowNull="true"/>
+            <element name="travelExpenses" typeRef="com.testshared1.testdb_26may.TravelExpense" isList="true" allowNull="true"/>
+            <element name="idTravelEmployee" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.AssetFile">
+            <element name="idAssetFile" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="asset" typeRef="com.testshared1.testdb_26may.Asset" allowNull="true"/>
+            <element name="filePath" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="mimeType" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeOperationLog">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="logOperations" typeRef="com.testshared1.testdb_26may.LogOperation" isList="true" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeOperationLog" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListOvertimePayroll">
+            <element name="overTimeSegmentPayrolls" typeRef="com.testshared1.testdb_26may.OverTimeSegmentPayroll" isList="true" allowNull="true"/>
+            <element name="startTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="idListOvertimePayroll" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="overTimeEmployee" typeRef="com.testshared1.testdb_26may.OverTimeEmployee" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="payrollDetail" typeRef="com.testshared1.testdb_26may.PayrollDetail" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="endTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.PaymentLoanManual">
+            <element name="idPaymentLoanManual" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="interestValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="valuePaid" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="interestRate" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="loan" typeRef="com.testshared1.testdb_26may.Loan" allowNull="true"/>
+            <element name="totalValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.EmployeeMessage">
+            <element name="message" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idEmployeeMessage" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userByFkUserSends" typeRef="com.testshared1.testdb_26may.User" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="issue" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userByFkUserReceive" typeRef="com.testshared1.testdb_26may.User" allowNull="true"/>
+            <element name="highPriority" typeRef="java.lang.Boolean" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.DeductionPeriodic">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listPeriodicDeductionEmployees" typeRef="com.testshared1.testdb_26may.ListPeriodicDeductionEmployee" isList="true" allowNull="true"/>
+            <element name="suggestedValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="calculations" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="listPeriodicDeductionPayrolls" typeRef="com.testshared1.testdb_26may.ListPeriodicDeductionPayroll" isList="true" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idDeductionPeriodic" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeCompanyDepartment">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeCompanyDepartment" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="companyDepartments" typeRef="com.testshared1.testdb_26may.CompanyDepartment" isList="true" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.EmployeeWorkDay">
+            <element name="totalOvertime" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="workDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idEmployeeWorkDay" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="totalHoursLate" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="totalHoursWorked" typeRef="java.lang.Double" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeTravellingExpense">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idTypeTravellingExpense" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="travelExpenses" typeRef="com.testshared1.testdb_26may.TravelExpense" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeAnnouncement">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="announcements" typeRef="com.testshared1.testdb_26may.Announcement" isList="true" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idTypeAnnouncement" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.RateCurrency">
+            <element name="idRateCurrency" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="rateDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.EmployeeAssessment">
+            <element name="assessmentEmployeeDatas" typeRef="com.testshared1.testdb_26may.AssessmentEmployeeData" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employeeByFkEvaluatingEmployee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="evaluationDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="workPosition" typeRef="com.testshared1.testdb_26may.WorkPosition" allowNull="true"/>
+            <element name="user" typeRef="com.testshared1.testdb_26may.User" allowNull="true"/>
+            <element name="idEmployeeAssessment" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employeeByFkEvaluatedEmployee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeApplicantStatus">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="applicantToPositions" typeRef="com.testshared1.testdb_26may.ApplicantToPosition" isList="true" allowNull="true"/>
+            <element name="idTypeMaritalStatus" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.WorkPositionPerformanceIndicator">
+            <element name="indicator" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="assessmentFields" typeRef="com.testshared1.testdb_26may.AssessmentField" isList="true" allowNull="true"/>
+            <element name="idWorkPositionPerformanceIndicator" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="workPosition" typeRef="com.testshared1.testdb_26may.WorkPosition" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.VacationDayDebit">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idVacationDayDebit" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="startPeriodDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="generatedDay" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="endPeriodDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListAssetUnloaded">
+            <element name="asset" typeRef="com.testshared1.testdb_26may.Asset" allowNull="true"/>
+            <element name="idListAssetUnloaded" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="assetDischargeDocument" typeRef="com.testshared1.testdb_26may.AssetDischargeDocument" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeEmployeeStatus">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeApplicantStatus" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employees" typeRef="com.testshared1.testdb_26may.Employee" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.OverTimeEmployee">
+            <element name="startTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idOverTimeEmployee" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="endTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="listOvertimePayrolls" typeRef="com.testshared1.testdb_26may.ListOvertimePayroll" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.WorkPosition">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="workPositionRequiements" typeRef="com.testshared1.testdb_26may.WorkPositionRequiement" isList="true" allowNull="true"/>
+            <element name="workPositionPerformanceIndicators" typeRef="com.testshared1.testdb_26may.WorkPositionPerformanceIndicator" isList="true" allowNull="true"/>
+            <element name="workPositionScopes" typeRef="com.testshared1.testdb_26may.WorkPositionScope" isList="true" allowNull="true"/>
+            <element name="workPositionsForFkSuperiorPosition" typeRef="com.testshared1.testdb_26may.WorkPosition" isList="true" allowNull="true"/>
+            <element name="terminosContrato" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employeeAssessments" typeRef="com.testshared1.testdb_26may.EmployeeAssessment" isList="true" allowNull="true"/>
+            <element name="workPositionByFkSuperiorPosition" typeRef="com.testshared1.testdb_26may.WorkPosition" allowNull="true"/>
+            <element name="descripcionFuncionesContrato" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="jobDescription" typeRef="java.lang.String" allowNull="true"/>
+            <element name="workPositionResponsibilities" typeRef="com.testshared1.testdb_26may.WorkPositionResponsibility" isList="true" allowNull="true"/>
+            <element name="postName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="rangoPagoMax" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="idWorkPosition" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="rangoPagoMin" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="listEmployeePositions" typeRef="com.testshared1.testdb_26may.ListEmployeePosition" isList="true" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="companyDepartment" typeRef="com.testshared1.testdb_26may.CompanyDepartment" allowNull="true"/>
+            <element name="workPositionVacants" typeRef="com.testshared1.testdb_26may.WorkPositionVacant" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListPeriodicDeductionPayroll">
+            <element name="idListPeriodicDeductionPayroll" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="payrollDetail" typeRef="com.testshared1.testdb_26may.PayrollDetail" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="deductionPeriodic" typeRef="com.testshared1.testdb_26may.DeductionPeriodic" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.DeductionEventual">
+            <element name="idDeductionEventual" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="reason" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="payrollDetail" typeRef="com.testshared1.testdb_26may.PayrollDetail" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListEmployeePhone">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idListEmployeePhone" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="active" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="mobileNumber" typeRef="com.testshared1.testdb_26may.MobileNumber" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="companyBonus" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeAlert">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeAlert" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="alerts" typeRef="com.testshared1.testdb_26may.Alert" isList="true" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Log">
+            <element name="logOperation" typeRef="com.testshared1.testdb_26may.LogOperation" allowNull="true"/>
+            <element name="logId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="user" typeRef="com.testshared1.testdb_26may.User" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.RateOvertimeHour">
+            <element name="startTime" typeRef="java.util.Date" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeGenerationForm" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="calculatedBaseSalary" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="extraHourRate" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="endTime" typeRef="java.util.Date" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.AssetPhotoFile">
+            <element name="asset" typeRef="com.testshared1.testdb_26may.Asset" allowNull="true"/>
+            <element name="mainPhoto" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="filePath" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idAssetPhotoFile" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="fileName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="mimeType" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeOperationTimesheet">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="timeSheets" typeRef="com.testshared1.testdb_26may.TimeSheet" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeOperationTimesheet" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.AssessmentField">
+            <element name="idAssessmentField" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="assessmentEmployeeDatas" typeRef="com.testshared1.testdb_26may.AssessmentEmployeeData" isList="true" allowNull="true"/>
+            <element name="weight" typeRef="java.lang.Float" allowNull="true"/>
+            <element name="workPositionPerformanceIndicator" typeRef="com.testshared1.testdb_26may.WorkPositionPerformanceIndicator" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="code" typeRef="java.lang.String" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="assessment" typeRef="com.testshared1.testdb_26may.Assessment" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.DetallePlanillaIngresos">
+            <element name="type_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="code" typeRef="java.lang.String" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="idPayrollDetail" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListCommissionPayroll">
+            <element name="collectionNet" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="commissionChargePercentage" typeRef="java.lang.Float" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="payrollDetail" typeRef="com.testshared1.testdb_26may.PayrollDetail" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="commissionValueCharged" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="commission" typeRef="com.testshared1.testdb_26may.Commission" allowNull="true"/>
+            <element name="idListCommissionPayroll" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListEmployeePosition">
+            <element name="endPossessionDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="workPosition" typeRef="com.testshared1.testdb_26may.WorkPosition" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="currentPosition" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="startPossessionDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idListEmployeePosition" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.MobileNumber">
+            <element name="typeCellularCompany" typeRef="com.testshared1.testdb_26may.TypeCellularCompany" allowNull="true"/>
+            <element name="listCelphoneDetailPayrolls" typeRef="com.testshared1.testdb_26may.ListCelphoneDetailPayroll" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listEmployeePhones" typeRef="com.testshared1.testdb_26may.ListEmployeePhone" isList="true" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="number" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idCellphone" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="companyValueBond" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.IsrDetail">
+            <element name="idIsrDetail" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="debit" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeEducation">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employeeEducations" typeRef="com.testshared1.testdb_26may.EmployeeEducation" isList="true" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idTypeEducation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeEmployeeTermination">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idEmployeeTermination" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employeeTerminations" typeRef="com.testshared1.testdb_26may.EmployeeTermination" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ApplicantToPosition">
+            <element name="applicantFiles" typeRef="com.testshared1.testdb_26may.ApplicantFile" isList="true" allowNull="true"/>
+            <element name="secondSurname" typeRef="java.lang.String" allowNull="true"/>
+            <element name="sex" typeRef="java.lang.String" allowNull="true"/>
+            <element name="workPositionVacantsForFkAspiranteAsignado" typeRef="com.testshared1.testdb_26may.WorkPositionVacant" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="surname" typeRef="java.lang.String" allowNull="true"/>
+            <element name="identityNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="country" typeRef="com.testshared1.testdb_26may.Country" allowNull="true"/>
+            <element name="applicantNotes" typeRef="com.testshared1.testdb_26may.ApplicantNote" isList="true" allowNull="true"/>
+            <element name="marriageName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="workPositionVacantByFkWorkPositionVacant" typeRef="com.testshared1.testdb_26may.WorkPositionVacant" allowNull="true"/>
+            <element name="email" typeRef="java.lang.String" allowNull="true"/>
+            <element name="typeMaritalStatus" typeRef="com.testshared1.testdb_26may.TypeMaritalStatus" allowNull="true"/>
+            <element name="idApplicantToPosition" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="secondName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="birthDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="applicantAppointments" typeRef="com.testshared1.testdb_26may.ApplicantAppointment" isList="true" allowNull="true"/>
+            <element name="firstName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="typeApplicantStatus" typeRef="com.testshared1.testdb_26may.TypeApplicantStatus" allowNull="true"/>
+            <element name="employees" typeRef="com.testshared1.testdb_26may.Employee" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Payroll">
+            <element name="startDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="imprintDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="userByFkUserPrints" typeRef="com.testshared1.testdb_26may.User" allowNull="true"/>
+            <element name="finalDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="confirmationDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="typeGenerationForm" typeRef="com.testshared1.testdb_26may.TypeGenerationForm" allowNull="true"/>
+            <element name="idPayroll" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="impresa" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+            <element name="payrollDetails" typeRef="com.testshared1.testdb_26may.PayrollDetail" isList="true" allowNull="true"/>
+            <element name="listCelphoneDetailPayrolls" typeRef="com.testshared1.testdb_26may.ListCelphoneDetailPayroll" isList="true" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="confirmation" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="userByFkUserElaborate" typeRef="com.testshared1.testdb_26may.User" allowNull="true"/>
+            <element name="developmentDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userByFkUserConfirmation" typeRef="com.testshared1.testdb_26may.User" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Bank">
+            <element name="noSwift" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employeeSalaries" typeRef="com.testshared1.testdb_26may.EmployeeSalary" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idBank" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="direction" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="contact" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Location">
+            <element name="phone" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fax" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="department" typeRef="java.lang.String" allowNull="true"/>
+            <element name="direction" typeRef="java.lang.String" allowNull="true"/>
+            <element name="code" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="country" typeRef="com.testshared1.testdb_26may.Country" allowNull="true"/>
+            <element name="city" typeRef="java.lang.String" allowNull="true"/>
+            <element name="registrationNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="companyDepartments" typeRef="com.testshared1.testdb_26may.CompanyDepartment" isList="true" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Viaje">
+            <element name="budget" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="travelDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="travelMotive" typeRef="java.lang.String" allowNull="true"/>
+            <element name="returnDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idTravel" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="travelEmployees" typeRef="com.testshared1.testdb_26may.TravelEmployee" isList="true" allowNull="true"/>
+            <element name="destination" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.PaymentCheck">
+            <element name="amount" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="creationDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="imprintDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="idPaymentCheck" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="payrollDetail" typeRef="com.testshared1.testdb_26may.PayrollDetail" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="noCheque" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="impreso" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="user" typeRef="com.testshared1.testdb_26may.User" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.TypeExtraHourSegment">
+            <element name="overTimeSegmentPayrolls" typeRef="com.testshared1.testdb_26may.OverTimeSegmentPayroll" isList="true" allowNull="true"/>
+            <element name="startTime" typeRef="java.util.Date" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="rate" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="idTypeExtraHourSegment" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="endTime" typeRef="java.util.Date" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Table8">
+            <element name="id" typeRef="java.lang.String" allowNull="true"/>
+            <element name="table7s" typeRef="com.testshared1.testdb_26may.Table7" isList="true" allowNull="true"/>
+            <element name="column3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="column2" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.OverTimeSegmentPayroll">
+            <element name="idOverTimeSegmentPayroll" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="hoursByRate" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="listOvertimePayroll" typeRef="com.testshared1.testdb_26may.ListOvertimePayroll" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="hourDifference" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="endTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="currency" typeRef="com.testshared1.testdb_26may.Currency" allowNull="true"/>
+            <element name="startTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="typeExtraHourSegment" typeRef="com.testshared1.testdb_26may.TypeExtraHourSegment" allowNull="true"/>
+            <element name="rate" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.Table7">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="table8" typeRef="com.testshared1.testdb_26may.Table8" allowNull="true"/>
+            <element name="column2" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.EmployeePersonalReference">
+            <element name="idEmployeePersonalReference" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="secondSurname" typeRef="java.lang.String" allowNull="true"/>
+            <element name="sex" typeRef="java.lang.String" allowNull="true"/>
+            <element name="phone" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="direction" typeRef="java.lang.String" allowNull="true"/>
+            <element name="surname" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employeeRelationship" typeRef="java.lang.String" allowNull="true"/>
+            <element name="emergencyContact" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="marriageName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="email" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="secondName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
+            <element name="mobileNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="firstName" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.AssessmentEmployeeData">
+            <element name="employeeAssessment" typeRef="com.testshared1.testdb_26may.EmployeeAssessment" allowNull="true"/>
+            <element name="idAssessmentEmployeeData" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="assessmentField" typeRef="com.testshared1.testdb_26may.AssessmentField" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ApplicantAppointment">
+            <element name="startDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="textColor" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="confirmationDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="finalDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="confirmation" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="applicantToPosition" typeRef="com.testshared1.testdb_26may.ApplicantToPosition" allowNull="true"/>
+            <element name="nameEvent" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idApplicantAppointment" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+    </dataobjects>
+</service>

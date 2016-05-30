@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:p="http://www.springframework.org/schema/p" xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <context:component-scan base-package="com.testshared1.testdb_26may.controller,com.testshared1.testdb_26may.service,com.testshared1.testdb_26may.dao"/>
+    <bean class="com.wavemaker.runtime.data.spring.WMPropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>
+                    classpath:TestDB_26may.properties
+                </value>
+            </list>
+        </property>
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+    </bean>
+    <bean id="TestDB_26mayWMManagedDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" depends-on="systemPropertyInitializer" lazy-init="true"
+          p:driverClass="${TestDB_26may.driverClass}"
+          p:jdbcUrl="${TestDB_26may.url}"
+          p:user="${TestDB_26may.username}"
+          p:password="${TestDB_26may.password}"
+          p:maxPoolSize="4"
+          p:minPoolSize="2"
+          p:maxIdleTime="600"
+          p:maxStatements="50"
+          p:maxStatementsPerConnection="20"
+          p:checkoutTimeout="30000"
+          p:idleConnectionTestPeriod="300"
+          p:unreturnedConnectionTimeout="300"
+          p:debugUnreturnedConnectionStackTraces="true"
+          p:acquireRetryAttempts="3"
+          p:acquireRetryDelay="1000"
+          p:contextClassLoaderSource="library"
+          p:privilegeSpawnedThreads="true"
+            />
+
+    <bean id="TestDB_26maySessionFactory" class="com.wavemaker.runtime.data.factory.TypeResolverSessionFactoryBean">
+        <property name="dataSource" ref="TestDB_26mayDataSource"/>
+        <property name="packagesToScan" value="com.testshared1.testdb_26may"/>
+        <property name="mappingResources">
+            <list>
+                <value>
+                TestDB_26may-queries.hbm.xml
+                </value>
+            </list>
+        </property>
+        <property name="customTypes">
+            <array value-type="com.wavemaker.runtime.data.CustomType">
+                <ref bean="dateTimeCustomType"/>
+            </array>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">
+                ${TestDB_26may.dialect}
+                </prop>
+                <prop key="hibernate.show_sql">
+                    false
+                </prop>
+                <prop key="hibernate.globally_quoted_identifiers">
+                    false
+                </prop>
+                <prop key="hibernate.hbm2ddl.auto">
+                ${TestDB_26may.hbm2ddl}
+                </prop>
+                <prop key="hibernate.temp.use_jdbc_metadata_defaults">
+                    false
+                </prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="TestDB_26mayTransactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="TestDB_26maySessionFactory"/>
+    </bean>
+    <bean id="TestDB_26mayTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">
+        <property name="sessionFactory" ref="TestDB_26maySessionFactory"/>
+    </bean>
+    <bean id="TestDB_26mayWMQueryExecutor" class="com.wavemaker.runtime.data.dao.query.WMQueryExecutorImpl">
+        <property name="template" ref="TestDB_26mayTemplate"/>
+    </bean>
+    <bean id="TestDB_26mayWMProcedureExecutor" class="com.wavemaker.runtime.data.dao.procedure.WMProcedureExecutorImpl">
+        <property name="template" ref="TestDB_26mayTemplate"/>
+        <property name="serviceId" value="TestDB_26may" />
+    </bean>
+
+    <bean id="persistentLocalDateTimeType" class="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime"/>
+    <bean id="dateTimeCustomType" class="com.wavemaker.runtime.data.CustomType">
+        <property name="type" ref="persistentLocalDateTimeType"/>
+        <property name="keys">
+            <list>
+                <value>DateTime</value>
+                <value>org.joda.time.LocalDateTime</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="TestDB_26mayPageableHandlerMethodResolver" class="com.wavemaker.runtime.resolver.WMPageableHandlerMethodArgumentResolver" >
+        <property name="pageParameterName" value="page"/>
+        <property name="sizeParameterName" value="size"/>
+        <property name="oneIndexedParameters" value="true"/>
+        <property name="maxPageSize" value="${TestDB_26may.maxPageSize}"/>
+        <property name="fallbackPageable">
+            <bean  class="org.springframework.data.domain.PageRequest">
+                <constructor-arg  value="0"/>
+                <constructor-arg  value="20"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="TestDB_26mayDataSource" class="com.wavemaker.runtime.data.datasource.WMDataSource">
+        <property name="dataSourceType" value="${TestDB_26may.dataSourceType}"/>
+        <property name="jndiName" value="${TestDB_26may.jndiName}"/>
+        <property name="serviceId" value="TestDB_26may"/>
+    </bean>
+
+
+    <tx:annotation-driven/>
+
+</beans>
+
