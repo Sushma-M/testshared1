@@ -307,14 +307,6 @@
             <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
             <element name="justifiedLeaveFiles" typeRef="com.testshared1.testdb_26may.JustifiedLeaveFile" isList="true" allowNull="true"/>
         </dataobject>
-        <dataobject javaType="com.testshared1.testdb_26may.ListAssetReintegrated">
-            <element name="assetReintegrationDocument" typeRef="com.testshared1.testdb_26may.AssetReintegrationDocument" allowNull="true"/>
-            <element name="idListAssetReintegrated" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="asset" typeRef="com.testshared1.testdb_26may.Asset" allowNull="true"/>
-            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
-            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
-        </dataobject>
         <dataobject javaType="com.testshared1.testdb_26may.Country">
             <element name="employeeGeneralDetails" typeRef="com.testshared1.testdb_26may.EmployeeGeneralDetail" isList="true" allowNull="true"/>
             <element name="users" typeRef="com.testshared1.testdb_26may.User" isList="true" allowNull="true"/>
@@ -329,6 +321,14 @@
             <element name="codIso2" typeRef="java.lang.String" allowNull="true"/>
             <element name="codIso3" typeRef="java.lang.String" allowNull="true"/>
             <element name="employees" typeRef="com.testshared1.testdb_26may.Employee" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListAssetReintegrated">
+            <element name="assetReintegrationDocument" typeRef="com.testshared1.testdb_26may.AssetReintegrationDocument" allowNull="true"/>
+            <element name="idListAssetReintegrated" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="asset" typeRef="com.testshared1.testdb_26may.Asset" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.testshared1.testdb_26may.EmployeeLaborHistory">
             <element name="occasionOfRetirement" typeRef="java.lang.String" allowNull="true"/>
@@ -515,6 +515,16 @@
             <element name="idAssetReintegrationDocument" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="userDevelops" typeRef="java.lang.Integer" allowNull="true"/>
         </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.JustifiedLeaveFile">
+            <element name="idJustifiedLeaveFile" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="filePath" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="justifiedAbsense" typeRef="com.testshared1.testdb_26may.JustifiedAbsense" allowNull="true"/>
+            <element name="mimeType" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
         <dataobject javaType="com.testshared1.testdb_26may.AssetAssignDocument">
             <element name="printedNote" typeRef="java.lang.Boolean" allowNull="true"/>
             <element name="idAssetAssignDocument" typeRef="java.lang.Integer" allowNull="true"/>
@@ -526,16 +536,6 @@
             <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
             <element name="userDevelops" typeRef="java.lang.Integer" allowNull="true"/>
-        </dataobject>
-        <dataobject javaType="com.testshared1.testdb_26may.JustifiedLeaveFile">
-            <element name="idJustifiedLeaveFile" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="filePath" typeRef="java.lang.String" allowNull="true"/>
-            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
-            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
-            <element name="justifiedAbsense" typeRef="com.testshared1.testdb_26may.JustifiedAbsense" allowNull="true"/>
-            <element name="mimeType" typeRef="java.lang.String" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.testshared1.testdb_26may.EmployeeWorkProof">
             <element name="cetificationText" typeRef="java.lang.String" allowNull="true"/>
@@ -930,14 +930,6 @@
             <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
             <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
         </dataobject>
-        <dataobject javaType="com.testshared1.testdb_26may.WorkPositionRequiement">
-            <element name="idWorkPositionRequiement" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
-            <element name="name" typeRef="java.lang.String" allowNull="true"/>
-            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
-            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="workPosition" typeRef="com.testshared1.testdb_26may.WorkPosition" allowNull="true"/>
-        </dataobject>
         <dataobject javaType="com.testshared1.testdb_26may.AssetDischargeDocument">
             <element name="printedNote" typeRef="java.lang.Boolean" allowNull="true"/>
             <element name="noteReleaseDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
@@ -949,6 +941,14 @@
             <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
             <element name="userDevelops" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.WorkPositionRequiement">
+            <element name="idWorkPositionRequiement" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="workPosition" typeRef="com.testshared1.testdb_26may.WorkPosition" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.testshared1.testdb_26may.ListAssetLoaded">
             <element name="idListAssetLoaded" typeRef="java.lang.Integer" allowNull="true"/>
@@ -1116,6 +1116,14 @@
             <element name="applicantToPositions" typeRef="com.testshared1.testdb_26may.ApplicantToPosition" isList="true" allowNull="true"/>
             <element name="idTypeMaritalStatus" typeRef="java.lang.Integer" allowNull="true"/>
         </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.ListAssetUnloaded">
+            <element name="asset" typeRef="com.testshared1.testdb_26may.Asset" allowNull="true"/>
+            <element name="idListAssetUnloaded" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="assetDischargeDocument" typeRef="com.testshared1.testdb_26may.AssetDischargeDocument" allowNull="true"/>
+        </dataobject>
         <dataobject javaType="com.testshared1.testdb_26may.WorkPositionPerformanceIndicator">
             <element name="indicator" typeRef="java.lang.String" allowNull="true"/>
             <element name="observation" typeRef="java.lang.String" allowNull="true"/>
@@ -1135,14 +1143,6 @@
             <element name="endPeriodDate" typeRef="java.util.Date" allowNull="true"/>
             <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="employee" typeRef="com.testshared1.testdb_26may.Employee" allowNull="true"/>
-        </dataobject>
-        <dataobject javaType="com.testshared1.testdb_26may.ListAssetUnloaded">
-            <element name="asset" typeRef="com.testshared1.testdb_26may.Asset" allowNull="true"/>
-            <element name="idListAssetUnloaded" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
-            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="assetDischargeDocument" typeRef="com.testshared1.testdb_26may.AssetDischargeDocument" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.testshared1.testdb_26may.TypeEmployeeStatus">
             <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
@@ -1248,18 +1248,6 @@
             <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="endTime" typeRef="java.util.Date" allowNull="true"/>
         </dataobject>
-        <dataobject javaType="com.testshared1.testdb_26may.AssetPhotoFile">
-            <element name="asset" typeRef="com.testshared1.testdb_26may.Asset" allowNull="true"/>
-            <element name="mainPhoto" typeRef="java.lang.Boolean" allowNull="true"/>
-            <element name="filePath" typeRef="java.lang.String" allowNull="true"/>
-            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="idAssetPhotoFile" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="fileName" typeRef="java.lang.String" allowNull="true"/>
-            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
-            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
-            <element name="mimeType" typeRef="java.lang.String" allowNull="true"/>
-        </dataobject>
         <dataobject javaType="com.testshared1.testdb_26may.TypeOperationTimesheet">
             <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
             <element name="timeSheets" typeRef="com.testshared1.testdb_26may.TimeSheet" isList="true" allowNull="true"/>
@@ -1279,6 +1267,18 @@
             <element name="code" typeRef="java.lang.String" allowNull="true"/>
             <element name="description_" typeRef="java.lang.String" allowNull="true"/>
             <element name="assessment" typeRef="com.testshared1.testdb_26may.Assessment" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testshared1.testdb_26may.AssetPhotoFile">
+            <element name="asset" typeRef="com.testshared1.testdb_26may.Asset" allowNull="true"/>
+            <element name="mainPhoto" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="filePath" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idAssetPhotoFile" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="fileName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userFecha" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userMode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="mimeType" typeRef="java.lang.String" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.testshared1.testdb_26may.DetallePlanillaIngresos">
             <element name="type_" typeRef="java.lang.String" allowNull="true"/>
